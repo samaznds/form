@@ -5,8 +5,8 @@ import React from "react";
 export const SubmitForm = () => {
   const schema = yup.object().shape({
     name: yup.string().required("this field is mandatory"),
-    email: yup.string().email("this field is invalid").required(),
-    age: yup.number().positive().min(18).max(69).required(),
+    email: yup.string().email("this field is invalid").required("this field is required"),
+    age: yup.number().positive().min(18).max(69).required("this field is required" ),
     password: yup
       .string()
       .min(2)
